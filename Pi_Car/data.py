@@ -4,6 +4,7 @@ from flask import current_app as app
 
 data_blueprint = Blueprint("data", __name__)
 
+
 @data_blueprint.route("/")
 def show():
     app.logger.info("Starting to retrieve core data")

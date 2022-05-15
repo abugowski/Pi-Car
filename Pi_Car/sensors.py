@@ -5,6 +5,7 @@ try:
 except Exception:
     W1ThermSensor = None
 
+
 class Sensors:
     @staticmethod
     def get_external_temp():
