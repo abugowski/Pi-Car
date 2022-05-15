@@ -2,6 +2,7 @@ import logging
 
 from flask import Flask
 from logging.handlers import RotatingFileHandler
+from .data import data_blueprint
 
 
 def create_app(config_file="config/local_config.py"):
@@ -21,10 +22,7 @@ def create_app(config_file="config/local_config.py"):
     app.logger.setLevel(app.config.get("LOGGER_LEVEL", "ERROR"))
     app.logger.info("----- STARTING APP -----")
 
-    @app.route("/")
-    def hello_world():
-        app.logger.info("Running first route")
-        return "Hello, World!"
+    app.register_blueprint(data_blueprint)
 
     app.logger.info("----- FINISHED STARTING APP -----")
 

@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 flask = "*"
+w1thermsensor = "*"
 
 [dev-packages]
 pytest = "*"
