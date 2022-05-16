@@ -36,7 +36,7 @@ class Sensors:
         app.logger.debug(f"Temperature: {temperature}")
         return int(temperature)
 
-# DHT22 -> sensor
+    # DHT22 -> sensor
     @staticmethod
     def get_dht_temp():
         """
@@ -62,4 +62,3 @@ class Sensors:
         app.logger.info("Finished reading temperature sensor")
         app.logger.debug(f"Temperature: {temperature_c}")
         return int(temperature_c)
-
