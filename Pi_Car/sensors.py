@@ -50,7 +50,7 @@ class Sensors:
             temperature_c = dhtDevice.temperature
         except TypeError as e:
             app.logger.warning(
-                f"Unable to use primary temperature sensor in this environment: {e}"
+                f"Unable to use DHT temperature sensor in this environment: {e}"
             )
             temperature_c = -1
         except Exception as e:
