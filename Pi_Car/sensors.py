@@ -37,7 +37,7 @@ class Sensors:
         return int(temperature)
 
     # DHT22 -> sensor
-    @staticmethod
+    # @staticmethod
     def get_dht_temp():
         """
         Safely read the external temperature from DHT22 sensor
