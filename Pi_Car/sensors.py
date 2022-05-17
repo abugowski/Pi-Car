@@ -46,19 +46,19 @@ class Sensors:
         app.logger.info("Starting to read DHT22 temperature sensor")
 
         try:
-            dhtDevice = adafruit_dht.DHT22(board.D4, False)
-            temperature_c = dhtDevice.temperature
+            dhtDevice = adafruit_dht.DHT22(board.D17, False)
+            temperature_dht = dhtDevice.temperature
         except TypeError as e:
             app.logger.warning(
                 f"Unable to use DHT temperature sensor in this environment: {e}"
             )
-            temperature_c = -1
+            temperature_dht = -1
         except Exception as e:
             app.logger.error(
                 f"Unknown problem with primary external temperature sensor: {e}"
             )
-            temperature_c = -1
+            temperature_dht = -1
 
         app.logger.info("Finished reading temperature sensor")
-        app.logger.debug(f"Temperature: {temperature_c}")
-        return int(temperature_c)
+        app.logger.debug(f"Temperature: {temperature_dht}")
+        return int(temperature_dht)
