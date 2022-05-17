@@ -46,7 +46,7 @@ class Sensors:
         app.logger.info("Starting to read DHT22 temperature sensor")
 
         try:
-            dhtDevice = adafruit_dht.DHT22(board.D4)
+            dhtDevice = adafruit_dht.DHT22(board.D4, False)
             temperature_c = dhtDevice.temperature
         except TypeError as e:
             app.logger.warning(
