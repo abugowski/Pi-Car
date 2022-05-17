@@ -14,7 +14,7 @@ def show():
 
     app.logger.info("Starting to retrieve data from DHT Sensor")
     temperature_c = Sensors.get_dht_temp()
-    result_c = {"temperature": temperature_c}
+    result_c = {"dht_temperature": temperature_c}
 
     app.logger.info("Finished retrieving core data")
     app.logger.debug(f"Core data: {result}")
