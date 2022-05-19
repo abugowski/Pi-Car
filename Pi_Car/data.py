@@ -9,8 +9,9 @@ data_blueprint = Blueprint("data", __name__)
 def show():
     app.logger.info("Starting to retrieve core data")
     temperature = Sensors.get_external_temp()
+    boot_status = Sensors.get_boot_status()
 
-    result = {"temperature": temperature}
+    result = {"temperature": temperature, "boot": boot_status}
 
     # app.logger.info("Starting to retrieve data from DHT Sensor")
     # temperature_dht = Sensors.get_dht_temp()
