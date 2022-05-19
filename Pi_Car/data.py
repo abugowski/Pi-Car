@@ -12,10 +12,10 @@ def show():
 
     result = {"temperature": temperature}
 
-    app.logger.info("Starting to retrieve data from DHT Sensor")
-    temperature_dht = Sensors.get_dht_temp()
-    result_dht = {"dht_temperature": temperature_dht}
+    # app.logger.info("Starting to retrieve data from DHT Sensor")
+    # temperature_dht = Sensors.get_dht_temp()
+    # result_dht = {"dht_temperature": temperature_dht}
 
     app.logger.info("Finished retrieving core data")
     app.logger.debug(f"Core data: {result}")
-    return jsonify(result, result_dht)
+    return jsonify(result)

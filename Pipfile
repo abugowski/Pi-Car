@@ -8,6 +8,8 @@ flask = "*"
 w1thermsensor = "*"
 adafruit-circuitpython-dht = "*"
 board = "*"
+gpiozero = "*"
+pigpio = "*"
 
 [dev-packages]
 pytest = "*"
