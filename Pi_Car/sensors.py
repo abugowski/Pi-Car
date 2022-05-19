@@ -1,9 +1,11 @@
 from flask import current_app as app
+
 # import board
 from gpiozero import Button, exc
 
 try:
     from w1thermsensor import W1ThermSensor
+
     # import adafruit_dht
 except Exception:
     W1ThermSensor = None
